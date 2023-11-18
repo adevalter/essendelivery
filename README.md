@@ -21,6 +21,7 @@ Projeto está em desenvolvimento de acordo com a evolução novas Stack serão a
 
 - [@adevalter](https://www.github.com/adevalter)
 - [@alana](https://www.github.com/alana)
-- [@alessandro](https://www.github.com/alessandro)
+- [@alessandro](https://github.com/AlessandroJ)
+- [@marcos](https://github.com/marcos-jr-ti-09)
 - [@thais](https://github.com/ThaisGasparino)
 
