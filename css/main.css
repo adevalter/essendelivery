@@ -1,0 +1,407 @@
+header{
+    width: 100%;
+    max-width: 198rem;
+    background: url("../imagens/home.png") no-repeat center center;
+    height: 78.6rem;
+         
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:top;
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+header .menu{
+    display: flex;
+    width: 142.5rem;
+    height: 10.1rem; 
+    border-radius: 2rem;
+    background: var(--azul); 
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menu ul{
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: flex-end;
+    gap: 3.6rem; 
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+header nav ul {
+    display: flex;
+    gap: 4rem;
+}
+
+nav ul li a {
+    color: var(--amarelo);
+    font-size: 1.6rem;
+    letter-spacing: -0.48px;
+}
+.pede-pizza{
+    position: relative;
+    width: 100%;
+    height: 63.9rem;
+    padding-top: 20rem;
+    padding-left: 10rem;
+    
+   
+}
+
+main{ 
+   width: 100%;
+   max-width: 198rem;
+}
+
+.s-cardapio{
+    position: relative;
+    width: 100%;
+    padding-top: 11.3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden; 
+}
+
+footer{
+    width: 100%;
+    max-width: 198rem;
+    height: 38.5rem;
+    background: url("../imagens/footer.png") no-repeat center center;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:top;
+    
+}
+
+footer .main-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10rem;
+   
+}
+
+footer .main-area .left{
+    margin-right: 10rem;
+}
+
+footer .main-area .right{
+    flex-grow: 1;
+    display: flex;
+    
+}
+
+footer .main-area .right .item-nav ul li a{
+    color: var(--amarelo);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal; 
+    transition: color .3s ease;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+footer .main-area .right .item-nav ul li a:hover{
+    color: var(--fundo);
+}
+
+footer .main-area .right .item-politica{
+    color: var(--amarelo);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal; 
+    margin-left: 10rem;
+    margin-top: 20rem;    
+    
+}
+
+footer .main-area .right .social-footer{
+    display: flex;
+    position: relative;
+    align-items: end;
+    margin-left: 20rem;
+    margin-bottom: 3rem;
+}
+
+footer .main-area .right .social-footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.9rem; 
+}
+
+footer .copy{
+    display: flex;
+    color: var(--amarelo);
+    width: 100%;
+    align-items: stretch;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding-right: 4rem;
+}
+
+
+
+@media (max-width: 1200px) {
+    header .pede-pizza{
+        width: 100%;
+        max-width: 40.3rem;
+        height: 49.5rem;
+        padding-top: 20rem;
+        padding-left: 1rem;
+    }
+
+    .s-cardapio{
+        position: relative;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden; 
+    }
+
+    footer .main-area {
+        padding-top: 3rem;
+    }
+
+    footer .main-area .right .item-nav ul li a{
+        font-size: 1.4rem;
+    }
+    footer .main-area .right .item-politica{
+        
+        margin-left: 3rem;
+    }
+    footer .main-area .right .item-politica h5{
+        font-size: 1.6rem;
+    }
+}
+
+
+@media (max-width: 991px) {
+ 
+    header{
+        height: 61.59rem;
+    }
+    
+    header .pede-pizza{
+        width: 100%;
+        max-width: 33.3rem;
+        height: 40.9rem;
+        padding-top: 12rem;
+        padding-left: 1rem;
+    }
+
+    .s-cardapio{
+        position: relative;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden; 
+    }
+
+    footer .main-area .left{
+        width: 17.1rem;
+        height: 13.8rem;
+    }
+    footer .main-area .left {
+        margin-right: 5rem;
+    }
+
+    footer .main-area .right {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+
+    footer .main-area .right .item-nav ul li a{
+        font-size: 1.4rem;
+    }
+    footer .main-area .right .item-politica{
+        margin-left: 1rem;
+    }
+    footer .main-area .right .item-politica h5{
+        font-size: 1.6rem;
+    }
+
+    footer .main-area .right .social-footer ul {
+        width: 16rem;
+        height: 2.2rem;
+        gap: 3.9rem; 
+    }
+    footer .main-area .right .item-politica h5{
+        font-size: 1.4rem;
+    }
+
+    footer .copy{
+        
+        padding-right: 3rem;
+        font-size: 1.2rem;
+
+    }
+    
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 46.59rem; 
+    }
+    header nav{
+        display: none;
+    }
+    
+    header .menu{
+        height: 6.1rem; 
+    }
+    
+    header .logo{
+        width: 6.1rem;
+        margin-left: 2rem;
+    }
+    header ul li {
+        width: 2.4rem;
+    }
+
+    header .pede-pizza{
+    
+        position: relative;
+        width: 100%;
+        max-width: 25.8rem;
+        height: 34.1rem;
+        padding-top: 12rem;
+        padding-left: 1rem;
+        
+    }    
+
+    footer .main-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+    footer .main-area .left{
+        width: 10.1rem;
+        height: 13.8rem;
+    }
+    footer .main-area .left {
+        margin-right: 2rem;
+        
+    }
+
+    footer .main-area .right {
+      
+        display: flex;
+        align-content: center;
+        align-items: center;
+        height: 18rem;
+
+    }
+    
+    footer .main-area .right .item-nav ul li a{
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+    footer .main-area .right .item-politica{
+        margin-left: 1rem;
+    }
+    footer .main-area .right .item-politica h5{
+        font-size: 1.6rem;
+    }
+
+    footer .main-area .right .social-footer {
+         margin-bottom: -8rem;
+    }
+ 
+    footer .main-area .right .item-politica h5{
+        font-size: 1.4rem;
+        height: 10rem;
+    }
+    
+}
+
+@media (max-width: 560px) {   
+        
+    header{
+        height: 31.59rem;
+    }
+    header nav{
+        display: none;
+
+    }
+
+    header .menu{
+        height: 5.1rem; 
+    }
+    
+    header .logo{
+        width: 5.1rem;
+        margin-left: 2rem;
+    }
+    header ul li {
+        width: 2.4rem;
+    }
+
+    header .pede-pizza{
+    
+        position: relative;
+        width: 100%;
+        max-width: 21.4rem;
+        height: 26rem;
+        padding-top: 5rem;
+        padding-left: 1rem;
+       
+    }
+
+    footer{
+        width: 100%;
+        max-width: 56rem;
+        height: 30rem;
+        background: url("../imagens/footer.png") no-repeat center center;
+        background-repeat:no-repeat;
+        background-size:contain;
+        background-position:top;
+        background-color: var(--azul);
+        
+    }
+    footer .main-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        
+    }
+
+    footer .main-area .left {
+        width: 10.1rem;
+        height: 4.8rem;
+    }
+
+    footer .main-area .right .item-politica h5{
+        font-size: 1.2rem;
+    }
+
+ 
+    footer .main-area .right .item-politica h5{
+        font-size: 1rem;
+       
+    }
+}
+
