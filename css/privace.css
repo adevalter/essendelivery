@@ -1,0 +1,33 @@
+
+header .title{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: left;
+    color: #00132C;
+    margin-left: 15%; 
+}
+
+section{
+    width: 100%;
+}
+
+section .text{
+    display: inline-block;
+    text-align: justify;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid var(--azul, #00132C);
+    background: #F6FAFB;
+    margin: 4rem 1rem;
+    padding: 2%;
+}
+    
+section p{   
+    text-indent: 1.5em;
+  margin-top: 0 
+}
+
