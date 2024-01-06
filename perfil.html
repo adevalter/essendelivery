@@ -3,25 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essen Delibery - Perfil do Cliente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Condensed:ital,wght@0,100;0,300;0,400;0,600;1,600&family=Roboto:ital,wght@0,100;0,400;0,700;1,500&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/typograph.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>Essen Delivery</title>
 </head>
 <body>
-    <header>
-        <img src="/imagens/logonavbar.png" alt="Logotipo Essen Delivety">
-        <nav>
-            <ul>
-                <li>HOME</li>
-                <li>SOBRE</li>
-                <li>CARDÁPIO</li>
-                <li>PRODUTOS</li>
-                <li>CONTATO</li>
-                <li><img src="/imagens/svg/facebook.svg" alt="logo facebook"></li>
-                <li><img src="/imagens/svg/instagram.svg" alt="logo instagram"></li>
-                <li><img src="/imagens/svg/whatsapp.svg" alt="logo whatsapp"></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+<header>
+    <div class="container">
+        
+       <div class="menu">
+            <a href="#" class=""><img src="./imagens/logo.svg" alt="Logo Essen Delivery"></a>
+           
+            <nav>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">SOBRE</a></li>
+                    <li><a href="">PRODUTOS</a></li>
+                    <li><a href="">CONTATO</a></li>
+                    <li><a href="">LOGIN</a></li>
+                </ul>
+            </nav>
+                <ul>
+                    
+                    <li><img src="./imagens/facebook.svg" alt="Logo Facebook"></li>
+                    <li><img src="./imagens/instagram.svg" alt="Logo Instagram"></li>
+                    <li><img src="./imagens/whatsapp.svg" alt=" Logo Whatsapp"></li>
+                </ul>
+             <button><img src="imagens/icon-menu.png" alt="Icone Navegação"></button>
+        </div>
+        
+    </div>
+    <div class="pede-pizza"></div>
+</header>
+<main>
         <section>
             <div>
                 <h1>Perfil do Cliente</h1>
@@ -41,21 +62,37 @@
         </section>
     </main>
     <footer>
-        <img src="/imagens/logofooter.png" alt=" Logotiopo Essen Delivery">
-        <ul>
-            <li>HOME</li>
-            <li>SOBRE</li>
-            <li>CARDÁPIO</li>
-            <li>PRODUTOS</li>
-            <li>CONTATO</li>
-        </ul>
-        <span>Politica de Privacidade</span>
-        <ul>
-            <li><img src="/imagens/svg/facebook.svg" alt="logo facebook"></li>
-            <li><img src="/imagens/svg/instagram.svg" alt="logo instagram"></li>
-            <li><img src="/imagens/svg/whatsapp.svg" alt="logo whatsapp"></li>
-        </ul>
-        <span>essendelivery &COPY; 2023</span>
+        <div class="container">
+            <div class="main-area">
+                <div class="left">
+                    <img src="./imagens/Logo-xg.png" alt="">
+                </div>
+                <div class="right">
+                        <div class="item-nav">
+                            <ul>
+                                <li><a href="#">HOME</a></li>
+                                <li><a href="">SOBRE</a></li>
+                                <li><a href="">PRODUTOS</a></li>
+                                <li><a href="">CONTATO</a></li>
+                                <li><a href="">LOGIN</a></li>
+                            </ul>
+                        </div>
+                        <div class="item-politica">
+                            <h5>Política Privacidade</h5>
+                        </div>
+                        <div class="social-footer">
+                        <ul>
+                            <li><img src="./imagens/facebook.svg" alt="Facebook"></li>
+                            <li><img src="./imagens/instagram.svg" alt="Instagram"></li>
+                            <li><img src="./imagens/whatsapp.svg" alt="Whatsapp"></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <p class="copy">2023 &copy; Todos os direitos reservados. Essen Delivery</p>
+        </div>
+            
     </footer>
 </body>
 </html>
