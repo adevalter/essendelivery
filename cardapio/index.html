@@ -1,66 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essen Delibery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Condensed:ital,wght@0,100;0,300;0,400;0,600;1,600&family=Roboto:ital,wght@0,100;0,400;0,700;1,500&family=Sora:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/typograph.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/script.js" defer></script>
+    <title>Essen Delivery</title>
 </head>
+
 <body>
-    <header>
-        <img src="/imagens/logonavbar.png" alt="Logotipo Essen Delivety">
-        <nav>
-            <ul>
-                <li>HOME</li>
-                <li>SOBRE</li>
-                <li>CARDÁPIO</li>
-                <li>PRODUTOS</li>
-                <li>CONTATO</li>
-                <li><img src="/imagens/svg/facebook.svg" alt="logo facebook"></li>
-                <li><img src="/imagens/svg/instagram.svg" alt="logo instagram"></li>
-                <li><img src="/imagens/svg/whatsapp.svg" alt="logo whatsapp"></li>
-            </ul>
-        </nav>
-    </header>
+    <header class="back-cardapio" id="mainHeader"></header>
     <main>
-        <section>
-            <h1>Cardápio</h1>
-            <div >
-                <h4>Marguerita</h4>
-                <h6>Pizza</h6>
-                <p>mussarela + rodelas de tomate
-                    + manjericão</p>
-                    <img src="/imagens/produtos/marguerita.png" alt="Pizza Marguerita">
+        <div class="container">
+            <div class="tabs">
+                <div class="tab active" data-target="Pizza">Pizza</div>
+                <div class="tab" data-target="Refrigerante">Refrigerante</div>
+                <div class="tab" data-target="Pedido">Pedido</div>
             </div>
-            <h1>R$ 49,90</h1>
-            <span><img src="/imagens/svg/botaomais.svg" alt="Botão Adicionar Item Carrinho"></span>
-        </section>
-        <section>
-            <div >
-                <h4>Fanta</h4>
-                <h6>Refrigerante</h6>
-                <p>1 Litro</p>
-                    <img src="/imagens/produtos/fanta.png" alt="Refrigerante Fanta 1L">
+            <div id="panels">
+                <div class="Pizza panel active">
+                    <section class="s-cardapio">
+
+                        <div class="card-produto">
+                            <div class="card-titulo">
+                                <h6 class="card-nome">Marguerita</h6>
+                                <span class="card-tag">Pizza</span>
+                            </div>
+                            <div class="card-subtitulo">
+                                mussarela + rodelas de tomate + manjericao
+                            </div>
+                            <div class="card-image">
+                                <img src="../imagens/produtos/produto.png" alt="">
+                            </div>
+                            <div class="card-preco">
+                                <h3>R$ 59,99</h3>
+                                <button class="add-produto" type="button"> <img src="../imagens/mais.svg" /></button>
+                            </div>
+                        </div>
+                        <div class="card-produto">
+                            <div class="card-titulo">
+                                <h6 class="card-nome">Marguerita</h6>
+                                <span class="card-tag">Pizza</span>
+                            </div>
+                            <div class="card-subtitulo">
+                                mussarela + rodelas de tomate + manjericao
+                            </div>
+                            <div class="card-image">
+                                <img src="../imagens/produtos/produto.png" alt="">
+                            </div>
+                            <div class="card-preco">
+                                <h3>R$ 59,99</h3>
+                                <button class="add-produto" type="button"> <img src="../imagens/mais.svg" /></button>
+                            </div>
+                        </div>
+                        <div class="card-produto">
+                            <div class="card-titulo">
+                                <h6 class="card-nome">Marguerita</h6>
+                                <span class="card-tag">Pizza</span>
+                            </div>
+                            <div class="card-subtitulo">
+                                mussarela + rodelas de tomate + manjericao
+                            </div>
+                            <div class="card-image">
+                                <img src="../imagens/produtos/produto.png" alt="">
+                            </div>
+                            <div class="card-preco">
+                                <h3>R$ 59,99</h3>
+                                <button class="add-produto" type="button"> <img src="../imagens/mais.svg" /></button>
+                            </div>
+
+                        </div>
+
+                    </section>
+                </div>
+                <div class="Refrigerante panel ">
+                    <section class="s-cardapio">
+
+                        <div class="card-produto">
+                            <div class="card-titulo">
+                                <h6 class="card-nome">Fanta</h6>
+                                <span class="card-tag">Bebida</span>
+                            </div>
+                            <div class="card-subtitulo">
+                                Guarana
+                            </div>
+                            <div class="card-image">
+                                <img src="../imagens/produtos/fanta.png" alt="">
+                            </div>
+                            <div class="card-preco">
+                                <h3>R$ 59,99</h3>
+                                <button class="add-produto" type="button"> <img src="../imagens/mais.svg" /></button>
+                            </div>
+                        </div>
+                        <div class="card-produto">
+                            <div class="card-titulo">
+                                <h6 class="card-nome">Marguerita</h6>
+                                <span class="card-tag">Pizza</span>
+                            </div>
+                            <div class="card-subtitulo">
+                                mussarela + rodelas de tomate + manjericao
+                            </div>
+                            <div class="card-image">
+                                <img src="../imagens/produtos/fanta.png" alt="">
+                            </div>
+                            <div class="card-preco">
+                                <h3>R$ 59,99</h3>
+                                <a href="#"><img src="../imagens/mais.svg " alt="botão adicionar"></a>
+                            </div>
+                        </div>
+                        <div class="card-produto">
+                            <div class="card-titulo">
+                                <h6 class="card-nome">Marguerita</h6>
+                                <span class="card-tag">Pizza</span>
+                            </div>
+                            <div class="card-subtitulo">
+                                mussarela + rodelas de tomate + manjericao
+                            </div>
+                            <div class="card-image">
+                                <img src="../imagens/produtos/fanta.png" alt="">
+                            </div>
+                            <div class="card-preco">
+                                <h3>R$ 59,99</h3>
+                                <a href="#"><img src="../imagens/mais.svg" alt="botão adicionar"></a>
+                            </div>
+
+                        </div>
+
+                    </section>
+                </div>
+                <div class="Pedido panel ">
+                    pedidos
+                </div>
             </div>
-            <h1>R$ 19,90</h1>
-            <span><img src="/imagens/svg/botaomais.svg" alt="Botão Adicionar Item Carrinho"></span>
-        </section>
+        </div>
     </main>
-    <footer>
-        <img src="/imagens/logofooter.png" alt=" Logotiopo Essen Delivery">
-        <ul>
-            <li>HOME</li>
-            <li>SOBRE</li>
-            <li>CARDÁPIO</li>
-            <li>PRODUTOS</li>
-            <li>CONTATO</li>
-        </ul>
-        <span>Politica de Privacidade</span>
-        <ul>
-            <li><img src="/imagens/svg/facebook.svg" alt="logo facebook"></li>
-            <li><img src="/imagens/svg/instagram.svg" alt="logo instagram"></li>
-            <li><img src="/imagens/svg/whatsapp.svg" alt="logo whatsapp"></li>
-        </ul>
-        <span>essendelivery &COPY; 2023</span>
-    </footer>
+
+    <footer id="mainFooter"></footer>
 </body>
+
 </html>
