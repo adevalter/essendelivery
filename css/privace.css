@@ -1,4 +1,56 @@
 
+header{
+    width: 100%;
+    max-width: 198rem;
+    background: url("../imagens/home.png") no-repeat center center;
+    height: 78.6rem;
+         
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:top;
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+header .menu{
+    display: flex;
+    width: 142.5rem;
+    height: 10.1rem; 
+    border-radius: 2rem;
+    background: var(--azul); 
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menu ul{
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: flex-end;
+    gap: 3.6rem; 
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+header nav ul {
+    display: flex;
+    gap: 4rem;
+}
+
+nav ul li a {
+    color: var(--amarelo);
+    font-size: 1.6rem;
+    letter-spacing: -0.48px;
+}
+
+
 header .title{
     width: 100%;
     height: 80%;
@@ -26,6 +78,19 @@ section .text{
     padding: 2%;
 }
     
+section .forms{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid var(--azul, #00132C);
+    background: #F6FAFB;
+    margin: 4rem 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+}
 section p{   
     text-indent: 1.5em;
   margin-top: 0 

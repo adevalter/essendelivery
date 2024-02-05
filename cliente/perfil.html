@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/privace.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <script src="../js/scriptform.js" defer></script>
     <title>Essen Delivery</title>
 </head>
 <body>
@@ -44,7 +46,7 @@
     
     <div class="title">
         <h1>Perfil do Cliente </h1>
-        <h1>Em desenvolvimento</h1>
+        
     </div> 
 </header>
 <main>
@@ -52,26 +54,103 @@
     <section>
            
         <div class="container">
-            <section>              
-            <div class="text">
-            <h3>Dados do Cliente - Em desenvolvimento </h3>
-            <form action="/action_page.php" method="post">
-            <label>Nome:</label>
-            <input type="text" name="nome">
-            <label>Sobrenome:</label>
-            <input type="text" name="sobrenome">
-            <label>Data de Nascimento:</label>
-            <input type="text" name="data_nascimento">
-            <label>CPF:</label>
-            <input type="text" name="cpf">
-            <label>Email:</label>
-            <input type="text" name="sobrenome">
-            <label>Endereço 1:</label>
-            <input type="text" name="endereco_1">
-            <label>Endereço 2:</label>
-            <input type="text" name="endereco_2">
-            <input type="submit" value="Enviar">
-            </form>
+                         
+            <div class="forms">
+            
+            
+            <form action="">
+                <h2>Formulário de cadastro</h2>
+                <table>
+                  <tr>
+                    <td>    
+                      <label for="username">*Nome Completo:</label>
+                    </td>        
+                    <td> 
+                      <input type="text" id="username" name="username">
+                      <p id="username-helper" class="helper-text">O nome deve ser preenchido com mais de 3 caracteres</p>
+                    </td>        
+                    <td> 
+                      <label for="email">*E-mail:</label>
+                    </td>        
+                    <td> 
+                      <input type="email" id="email" name="email">
+                      <p id="email-helper" class="helper-text">O email deve conter @ e .com</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td> 
+                      <label for="datanascimento">Data de Nascimento:</label>
+                    </td>        
+                    <td> 
+                      <input id="date" type="date" />
+                    </td>        
+                    <td> 
+                      <label for="idade">CPF</label>
+                    </td>        
+                    <td> 
+                      <input type="number" id="cpf" name="cpf">
+                      <p id="cpf-helper" class="helper-text">O cpf deve conter 11 números</p>    
+            
+                    <tr>
+                        <td colspan="3"> 
+                      <label for="cep">Consulte seu estado e cidade com cep </label>
+                    </td>        
+                    <td> 
+                      <input type="text" name="cep" id="cep" placeholder="Informe um CEP" value="" />
+                    
+                      <input type="button" id="VerificarCEP" value="Verificar" />
+                    </td>
+                   <tr>
+                    <td> 
+                      <label for="cidade">Cidade</label>
+                    </td>        
+                    <td> 
+                      <input type="text" id="cidade" readonly disabled />
+                    </td>        
+                    <td> 
+                      <label for="cidade">Estado</label>
+                    </td>        
+                    <td> 
+                      <input type="text" id="estado" readonly disabled />
+                  </td>        
+                </tr>
+            <tr>            
+              <td> 
+                <label for="idade">Logradouro</label>
+              </td>
+              <td>
+                <input type="text" id="logradouro" name="logradouro">
+              
+                <p id="logradouro-helper" class="helper-text"> Deve conter apenas dados de endereco</p>
+              </td>        
+            
+                  <td> 
+                <label for="idade">Número</label>
+              </td>        
+              <td> 
+                <input type="number" id="num_end" name="num_end">
+                <p id="cpf-helper" class="helper-text">O cpf deve conter 11 números</p>
+              </td>
+              </tr>        
+              <tr>
+              <td> 
+                <label for="senha">*Senha:</label>
+              </td>
+              <td>
+                <input type="password" id="senha" name="senha">
+                <p id="senha-helper" class="helper-text">A senha deve conter mais de 5 caracteres</p>
+              </td>        
+              <td> 
+                <label for="confirma-senha">*Confirmar senha:</label>
+              </td>
+              <td>
+                <input type="password" id="confirma-senha" name="confirma-senha">
+                <p id="confirma-senha-helper" class="helper-text">Senha e confirmar senha são diferentes</p>
+              </td>        
+            </tr> 
+                <tr><td colspan="2"><button class="" type="reset">Reset</button></td><td colspan="2"><button type="submit">Enviar</button></td></tr>
+              </table>
+              </form>
         </div> 
             
     </section>
