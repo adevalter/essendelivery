@@ -1,3 +1,105 @@
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready)
+} else {
+    ready()
+}
+
+var totalAmount = "0,00"
+
+function ready() {
+    const removeProdutosButton = document.getElementsByClassName("remove-product-button");
+
+    for (var i = 0; i < removeProdutosButton.length; i++) {
+        removeProdutosButton[i].addEventListener("click", removeProduct)
+    }
+
+    const quantityInput = document.getElementsByClassName("product-qtd-input");
+    for (var i = 0; i < quantityInput.length; i++) {
+        quantityInput[i].addEventListener("change", updateTotal)
+    }
+
+    const addTocartButtons = document.querySelectorAll(".add-produto");
+
+    addTocartButtons.forEach(button => {
+        button.addEventListener("click", event => {
+            // Obtenha a aba atual
+            const currentTab = button.closest(".tab");
+
+            // Chame a função passando a aba atual como parâmetro
+            addProductToCart(event, currentTab);
+        });
+    });
+
+    const purchaseButton = document.getElementsByClassName("purchase-button")[0]
+    purchaseButton.addEventListener("click", makePurchase)
+
+}
+
+function makePurchase() {
+    if (totalAmount === "0,00") {
+        alert("Seu carrinho está vazio!")
+    } else {
+        alert(
+            `
+        Obrigado pela sua compra!
+        Valor do pedido: R$${totalAmount}\n
+        Volte sempre :)
+      `
+        )
+
+        document.querySelector(".cart-table tbody").innerHTML = ""
+        updateTotal()
+    }
+}
+
+function addProductToCart(event) {
+    const button = event.target
+    const productInfos = button.parentElement.parentElement.parentElement
+    const productImg = productInfos.getElementsByClassName("card-image")[0].querySelector("img").src;
+    const productName = productInfos.getElementsByClassName("card-nome")[0].innerText;
+    const productPrice = productInfos.getElementsByClassName("card-preco")[0].innerText;
+
+    const productsCardName = document.getElementsByClassName("cart-product-title");
+
+    for (var i = 0; i < productsCardName.length; i++) {
+        if (productsCardName[i].innerText === productName) {
+            productsCardName[i].parentElement.parentElement.getElementsByClassName("product-qtd-input")[0].value++;
+            updateTotal();
+            return;
+
+        }
+    }
+
+    let newCartProduct = document.createElement("tr");
+    newCartProduct.classList.add("cart-product");
+    newCartProduct.innerHTML =
+        `
+          <td class="product-identification">
+            <img src="${productImg}" alt="${productName}" class="cart-product-image">
+            <strong class="cart-product-title">${productName}</strong>
+          </td>
+          <td>
+            <span class="cart-product-price">${productPrice}</span>
+          </td>
+          <td>
+            <input type="number" value="1" min="0" class="product-qtd-input">
+            <button type="button" class="remove-product-button">Remover</button>
+          </td>
+        `
+    const tableBody = document.querySelector(".cart-table tbody")
+    tableBody.append(newCartProduct)
+    updateTotal()
+
+    newCartProduct.getElementsByClassName("remove-product-button")[0].addEventListener("click", removeProduct)
+    newCartProduct.getElementsByClassName("product-qtd-input")[0].addEventListener("change", checkIfInputIsNull)
+
+}
+
+function removeProduct(event) {
+    event.target.parentElement.parentElement.remove();
+    updateTotal();
+}
+
 document.getElementById("mainHeader").innerHTML = `
 <div class="container">
 
@@ -84,4 +186,33 @@ function onTabClick(event) {
 
 for (let i = 0; i < tab.length; i++) {
     tab[i].addEventListener('click', onTabClick, false);
+}
+
+//carrinho
+
+
+function updateTotal() {
+
+    totalAmount = 0;
+    const cardProducts = document.getElementsByClassName("cart-product");
+
+    for (var i = 0; i < cardProducts.length; i++) {
+        const productPrice = cardProducts[i].getElementsByClassName("cart-product-price")[0].innerText.replace("R$", "").replace(",", ".");
+        const productQuantity = cardProducts[i].getElementsByClassName("product-qtd-input")[0].value;
+
+        totalAmount += productPrice * productQuantity;
+        console.log(totalAmount)
+    }
+    totalAmount = totalAmount.toFixed(2);
+    totalAmount = totalAmount.replace(".", ",");
+    document.querySelector(".cart-total-container span").innerText = "R$ " + totalAmount;
+
+}
+
+function checkIfInputIsNull(event) {
+    if (event.target.value === "0") {
+        event.target.parentElement.parentElement.remove()
+    }
+
+    updateTotal()
 }
