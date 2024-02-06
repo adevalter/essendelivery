@@ -1,0 +1,86 @@
+CREATE DATABASE essendelivery;
+USE essendelivery
+
+
+CREATE TABLE cliente 
+( 
+ id_cliente INT PRIMARY KEY AUTO_INCREMENT,  
+ nome VARCHAR(n),  
+ nascimento DATE NOT NULL,  
+ cpf INT NOT NULL,  
+ email VARCHAR(n) NOT NULL,  
+ telefone INT,  
+ estado VARCHAR(n) NOT NULL,  
+ numero INT NOT NULL,  
+ logradouro VARCHAR(n) NOT NULL,  
+ cep INT NOT NULL,  
+ cidade VARCHAR(n) NOT NULL,  
+ senha VARCHAR(n) NOT NULL,  
+ UNIQUE (cpf,email)
+); 
+
+CREATE TABLE funcionario 
+( 
+ nome INT,  
+ matricula VARCHAR(n) NOT NULL,  
+ data_nascimento DATE NOT NULL,  
+ id_funcionario INT PRIMARY KEY,  
+ UNIQUE (matricula)
+); 
+
+CREATE TABLE produtos 
+( 
+ id_produto INT PRIMARY KEY,  
+ descricao VARCHAR(n) NOT NULL,  
+ data_fabricacao DATE NOT NULL,  
+ valor FLOAT NOT NULL,  
+ data_vencimento DATE NOT NULL,  
+ idcategoria INT,  
+); 
+
+CREATE TABLE pedido 
+( 
+ id_pedido INT PRIMARY KEY,  
+ idfuncionario INT,  
+ idcliente INT,  
+ valor_total FLOAT NOT NULL,  
+); 
+
+CREATE TABLE compra_histórico 
+( 
+ id_historico INT PRIMARY KEY,  
+ data_compra DATE NOT NULL,  
+ idpedido INT,  
+); 
+
+CREATE TABLE categoria 
+( 
+ descricao VARCHAR(n) NOT NULL,  
+ id_categoria INT PRIMARY KEY,  
+ UNIQUE (descricao)
+); 
+
+CREATE TABLE possui 
+( 
+ id_pedido INT PRIMARY KEY,  
+ id_produto INT,  
+); 
+
+CREATE TABLE avalia 
+( 
+ id_cliente INT PRIMARY KEY,  
+ id_produto INT PRIMARY KEY,  
+ comentario VARCHAR(n) NOT NULL,  
+ qtd_estrela INT NOT NULL,  
+ data_avaliacao DATE NOT NULL,  
+ id_avaliacao INT PRIMARY KEY AUTO_INCREMENT,  
+); 
+
+ALTER TABLE produtos ADD FOREIGN KEY(idcategoria) REFERENCES categoria (idcategoria)
+ALTER TABLE pedido ADD FOREIGN KEY(idfuncionario) REFERENCES funcionario (idfuncionario)
+ALTER TABLE pedido ADD FOREIGN KEY(idcliente) REFERENCES cliente (idcliente)
+ALTER TABLE compra_histórico ADD FOREIGN KEY(idpedido) REFERENCES pedido (idpedido)
+ALTER TABLE possui ADD FOREIGN KEY(id_pedido) REFERENCES pedido (id_pedido)
+ALTER TABLE possui ADD FOREIGN KEY(id_produto) REFERENCES produtos (id_produto)
+ALTER TABLE avalia ADD FOREIGN KEY(id_cliente) REFERENCES cliente (id_cliente)
+ALTER TABLE avalia ADD FOREIGN KEY(id_produto) REFERENCES produtos (id_produto)
