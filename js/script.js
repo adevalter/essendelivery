@@ -86,7 +86,7 @@ fetch("http://127.0.0.1:5500/pizza.json").then((response) => {
             `;
         });
         divPizza.append(divSCardapio);
-        ready();
+        //ready();
     });
 });
 
@@ -182,11 +182,11 @@ document.getElementById("mainHeader").innerHTML = `
 
             <nav>
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">SOBRE</a></li>
-                    <li><a href="">CARDÁPIO</a></li>
-                    <li><a href="">CONTATO</a></li>
-                    <li><a href="">LOGIN</a></li>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../about.html">SOBRE</a></li>
+                <li><a href="../cardapio/index.html">CARDÁPIO</a></li>
+                <li><a href="../error.html">CONTATO</a></li>
+                <li><a href="../cliente/login.html">LOGIN</a></li>
                 </ul>
             </nav>
             <ul>
@@ -211,11 +211,11 @@ document.getElementById("mainFooter").innerHTML = `
             <div class="right">
                 <div class="item-nav">
                     <ul>
-                        <li><a href="./index.html">HOME</a></li>
-                        <li><a href="">SOBRE</a></li>
-                        <li><a href="">CARDÁPIO</a></li>
-                        <li><a href="">CONTATO</a></li>
-                        <li><a href="">LOGIN</a></li>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="../about.html">SOBRE</a></li>
+                    <li><a href="../cardapio/index.html">CARDÁPIO</a></li>
+                    <li><a href="../error.html">CONTATO</a></li>
+                    <li><a href="../cliente/login.html">LOGIN</a></li>
                     </ul>
                 </div>
                 <div class="item-politica">
