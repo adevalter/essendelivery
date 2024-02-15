@@ -1,0 +1,46 @@
+{
+    "produtos": [
+        {
+            "nome": "Banana Com Chocolate",
+            "ingrediente": "Banana, Chocolate, creme de leite",
+            "foto": "chocolatecombanana.png",
+            "preco": "R$ 32,90",
+            "categoria": "Pizza"
+        },
+        {
+            "nome": "Calabresa",
+            "ingrediente": "calabresa, cebola, mussarela, oregano",
+            "foto": "calabresa.png",
+            "preco": "R$ 36,90",
+            "categoria": "Pizza"
+        },
+        {
+            "nome": "Portuguesa",
+            "ingrediente": " cebola, mussarela, oregano, Ovos, pimentão, Presunto",
+            "foto": "portuguesa-600x600.png",
+            "preco": "R$ 38,90",
+            "categoria": "Pizza"
+        },
+        {
+            "nome": "Marguerita",
+            "ingrediente": " Manjericão, mussarela, oregano, Tomate",
+            "foto": "marguerita.png",
+            "preco": "R$ 36,90",
+            "categoria": "Pizza"
+        },
+        {
+            "nome": "Três Queijos",
+            "ingrediente": "Catupiry, cheddar, mussarela, oregano",
+            "foto": "tres_queijos1.png",
+            "preco": "R$ 36,90",
+            "categoria": "Pizza"
+        },
+        {
+            "nome": "Frango Cremoso",
+            "ingrediente": " Frango, mussarela, oregano, Requeijão",
+            "foto": "frango.png",
+            "preco": "R$ 52,90",
+            "categoria": "Pizza"
+        }
+    ]
+}
