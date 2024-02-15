@@ -1,28 +1,38 @@
-
-.card-produto{
+.card-home {
     width: 33.9rem;
-    height: 51.9rem; 
+    height: 51.9rem;
+    border-radius: 10px;
+    margin: 4rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.card-produto {
+    width: 33.9rem;
+    height: 51.9rem;
     border-radius: 10px;
     border: 2px solid var(--azul, #00132C);
     background: #F6FAFB;
-    margin: 4rem 1rem ;
+    margin: 4rem 1rem;
 
 }
 
-.card-produto .card-titulo{
+.card-produto .card-titulo {
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
 }
 
 
-.card-produto h6{
+.card-produto h6 {
     display: flex;
     justify-content: baseline;
     margin-left: 3rem;
 }
 
-.card-produto .card-tag{
+.card-produto .card-tag {
     justify-content: end;
     margin-right: 3rem;
     color: #7D5015;
@@ -33,7 +43,7 @@
     line-height: normal;
 }
 
-.card-produto .card-subtitulo{
+.card-produto .card-subtitulo {
     font-style: 'roboto';
     color: #130E19;
     text-align: center;
@@ -43,17 +53,17 @@
     font-weight: 500;
     line-height: normal;
     margin-top: 2.5rem;
-    
+
 }
 
-.card-produto .card-image{
+.card-produto .card-image {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 5rem;
 }
 
-.card-preco{
+.card-preco {
     display: flex;
     justify-content: space-between;
     margin-top: 5rem;
@@ -64,47 +74,50 @@
 
 
 @media (max-width: 768px) {
- 
-    .card-produto { 
+
+    .card-produto {
         height: 30.90rem;
- 
+
     }
 
-    .card-preco{
+    .card-preco {
         display: flex;
         margin-top: 0;
     }
-    .card-preco h3{
+
+    .card-preco h3 {
         font-size: 2.3rem;
     }
-    .card-preco img{
-       width: 3.6rem;
-       height: 3.6rem;
+
+    .card-preco img {
+        width: 3.6rem;
+        height: 3.6rem;
     }
 
     .card-produto .card-image {
         margin-top: 1rem;
     }
-    .card-produto .card-image img{
+
+    .card-produto .card-image img {
         max-width: 70%;
     }
 
 }
 
-@media (max-width: 560px) {   
+@media (max-width: 560px) {
 
     .s-cardapio {
         display: flex;
         flex-direction: column;
         align-items: center;
         overflow: hidden;
-        
+
     }
 
-    .card-produto { 
+    .card-produto {
         width: 26.9rem;
         height: 35.90rem;
- 
+
     }
 
 }

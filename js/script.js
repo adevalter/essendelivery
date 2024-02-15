@@ -4,9 +4,15 @@ if (document.readyState == 'loading') {
     ready()
 }
 
+
+
+
+
 var totalAmount = "0,00"
 
 function ready() {
+
+
     const removeProdutosButton = document.getElementsByClassName("remove-product-button");
 
     for (var i = 0; i < removeProdutosButton.length; i++) {
@@ -32,7 +38,6 @@ function ready() {
 
     const purchaseButton = document.getElementsByClassName("purchase-button")[0]
     purchaseButton.addEventListener("click", makePurchase)
-
 }
 
 function makePurchase() {
@@ -51,6 +56,75 @@ function makePurchase() {
         updateTotal()
     }
 }
+
+let divPizza = document.querySelector(".Pizza");
+let divSCardapio = document.createElement("section");
+
+divSCardapio.classList.add("s-cardapio");
+
+fetch("http://127.0.0.1:5500/pizza.json").then((response) => {
+    response.json().then((dados) => {
+        console.log(dados);
+        dados.produtos.map((produto) => {
+            divSCardapio.innerHTML += `
+             <div class="card-produto">
+                            <div class="card-titulo">
+                                <h6 class="card-nome">${produto.nome}</h6>
+                                <span class="card-tag">${produto.categoria}</span>
+                            </div>
+                            <div class="card-subtitulo">
+                               ${produto.ingrediente}
+                            </div>
+                            <div class="card-image">
+                                <img src="../imagens/produtos/${produto.foto}" alt="${produto.nome}">
+                            </div>
+                            <div class="card-preco">
+                                <h3>${produto.preco}</h3>
+                                <button class="add-produto" type="button"> <img src="../imagens/mais.svg" /></button>
+                            </div>
+                        </div>
+            `;
+        });
+        divPizza.append(divSCardapio);
+        ready();
+    });
+});
+
+
+
+let divRefrigerante = document.querySelector(".Refrigerante");
+let divSCardapioBebida = document.createElement("section");
+
+divSCardapioBebida.classList.add("s-cardapio");
+
+fetch("http://127.0.0.1:5500/bebida.json").then((response) => {
+    response.json().then((dados) => {
+        console.log(dados);
+        dados.bebidas.map((bebida) => {
+            divSCardapioBebida.innerHTML += `
+             <div class="card-produto">
+                            <div class="card-titulo">
+                                <h6 class="card-nome">${bebida.nome}</h6>
+                                <span class="card-tag">${bebida.categoria}</span>
+                            </div>
+                            <div class="card-subtitulo">
+                               ${bebida.ingrediente}
+                            </div>
+                            <div class="card-image">
+                                <img src="../imagens/produtos/${bebida.foto}" alt="${bebida.nome}">
+                            </div>
+                            <div class="card-preco">
+                                <h3>${bebida.preco}</h3>
+                                <button class="add-produto" type="button"> <img src="../imagens/mais.svg" /></button>
+                            </div>
+                        </div>
+            `;
+        });
+        divRefrigerante.append(divSCardapioBebida);
+        ready();
+    });
+});
+
 
 function addProductToCart(event) {
     const button = event.target
@@ -211,10 +285,9 @@ function updateTotal() {
 
 function checkIfInputIsNull(event) {
     if (event.target.value === "0") {
-        event.target.parentElement.parentElement.remove()
+        event.target.parentElement.parentElement.remove();
     }
-    updateTotal()
+    updateTotal();
 }
-
 
 

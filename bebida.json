@@ -1,0 +1,25 @@
+{
+    "bebidas": [
+        {
+            "nome": "Coca-colca 2L",
+            "ingrediente": "Coca-Cola 2L",
+            "foto": "coca-cola-2l.png",
+            "preco": "R$ 13,99",
+            "categoria": "Bebida"
+        },
+        {
+            "nome": "Guaraná Kuat 1L",
+            "ingrediente": "Guaraná Kuat 1L",
+            "foto": "refrigerante-kuat-1-litro2.png",
+            "preco": "R$ 7,99",
+            "categoria": "Bebida"
+        },
+        {
+            "nome": "Guaraná 1,5L",
+            "ingrediente": "Guaraná 1,5L",
+            "foto": "guarana-15l.png",
+            "preco": "R$ 10,99",
+            "categoria": "Bebida"
+        }
+    ]
+}
