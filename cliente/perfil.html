@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Condensed:ital,wght@0,100;0,300;0,400;0,600;1,600&family=Roboto:ital,wght@0,100;0,400;0,700;1,500&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/typograph.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/privace.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <script src="../js/scriptform.js" defer></script>
+    <title>Essen Delivery</title>
+</head>
+<body>
+<header>
+    <div class="container">
+        
+       <div class="menu">
+            <a href="#" class=""><img src="../imagens/logo.svg" alt="Logo Essen Delivery"></a>
+           
+            <nav>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">SOBRE</a></li>
+                    <li><a href="">PRODUTOS</a></li>
+                    <li><a href="">CONTATO</a></li>
+                    <li><a href="">LOGIN</a></li>
+                </ul>
+            </nav>
+                <ul>
+                    
+                    <li><img src="../imagens/facebook.svg" alt="Logo Facebook"></li>
+                    <li><img src="../imagens/instagram.svg" alt="Logo Instagram"></li>
+                    <li><img src="../imagens/whatsapp.svg" alt=" Logo Whatsapp"></li>
+                </ul>
+             <button><img src="../imagens/icon-menu.png" alt="Icone Navegação"></button>
+        </div>
+        
+    </div>
+    
+    <div class="title">
+        <h1>Perfil do Cliente </h1>
+        
+    </div> 
+</header>
+<main>
+        
+    <section>
+           
+        <div class="container">
+                         
+            <div class="forms">
+            
+            
+            <form action="">
+                <h2>Formulário de cadastro</h2>
+                <table>
+                  <tr>
+                    <td>    
+                      <label for="username">*Nome Completo:</label>
+                    </td>        
+                    <td> 
+                      <input type="text" id="username" name="username">
+                      <p id="username-helper" class="helper-text">O nome deve ser preenchido com mais de 3 caracteres</p>
+                    </td>        
+                    <td> 
+                      <label for="email">*E-mail:</label>
+                    </td>        
+                    <td> 
+                      <input type="email" id="email" name="email">
+                      <p id="email-helper" class="helper-text">O email deve conter @ e .com</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td> 
+                      <label for="datanascimento">Data de Nascimento:</label>
+                    </td>        
+                    <td> 
+                      <input id="date" type="date" />
+                    </td>        
+                    <td> 
+                      <label for="idade">CPF</label>
+                    </td>        
+                    <td> 
+                      <input type="number" id="cpf" name="cpf">
+                      <p id="cpf-helper" class="helper-text">O cpf deve conter 11 números</p>    
+            
+                    <tr>
+                        <td> 
+                      <label for="cep">Contato(telefone) </label>
+                        </td>
+                        <td>
+                            <input type="text" id="telefone" name="telefone">
+                        </td>
+                    <td> 
+                      <input type="text" name="cep" id="cep" placeholder="Coloque o cep para consultar" value="" />
+                    </td>
+                    <td>
+                      <input type="button" id="VerificarCEP" value="Verificar" />
+                    </td>
+                   <tr>
+                    <td> 
+                      <label for="cidade">Cidade</label>
+                    </td>        
+                    <td> 
+                      <input type="text" id="cidade" readonly disabled />
+                    </td>        
+                    <td> 
+                      <label for="cidade">Estado</label>
+                    </td>        
+                    <td> 
+                      <input type="text" id="estado" readonly disabled />
+                  </td>        
+                </tr>
+            <tr>            
+              <td> 
+                <label for="idade">Logradouro</label>
+              </td>
+              <td>
+                <input type="text" id="logradouro" name="logradouro">
+              
+                <p id="logradouro-helper" class="helper-text"> Deve conter apenas dados de endereco</p>
+              </td>        
+            
+                  <td> 
+                <label for="idade">Número</label>
+              </td>        
+              <td> 
+                <input type="number" id="num_end" name="num_end">
+                <p id="cpf-helper" class="helper-text">O cpf deve conter 11 números</p>
+              </td>
+              </tr>        
+              <tr>
+              <td> 
+                <label for="senha">*Senha:</label>
+              </td>
+              <td>
+                <input type="password" id="senha" name="senha">
+                <p id="senha-helper" class="helper-text">A senha deve conter mais de 5 caracteres</p>
+              </td>        
+              <td> 
+                <label for="confirma-senha">*Confirmar senha:</label>
+              </td>
+              <td>
+                <input type="password" id="confirma-senha" name="confirma-senha">
+                <p id="confirma-senha-helper" class="helper-text">Senha e confirmar senha são diferentes</p>
+              </td>        
+            </tr> 
+                <tr><td colspan="2"><button class="" type="reset">Reset</button></td><td colspan="2"><button type="submit">Enviar</button></td></tr>
+              </table>
+              </form>
+        </div> 
+            
+    </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="main-area">
+                <div class="left">
+                    <img src="../imagens/Logo-xg.png" alt="">
+                </div>
+                <div class="right">
+                        <div class="item-nav">
+                            <ul>
+                                <li><a href="#">HOME</a></li>
+                                <li><a href="">SOBRE</a></li>
+                                <li><a href="">PRODUTOS</a></li>
+                                <li><a href="">CONTATO</a></li>
+                                <li><a href="">LOGIN</a></li>
+                            </ul>
+                        </div>
+                        <div class="item-politica">
+                            <h5>Política Privacidade</h5>
+                        </div>
+                        <div class="social-footer">
+                        <ul>
+                            <li><img src="../imagens/facebook.svg" alt="Facebook"></li>
+                            <li><img src="../imagens/instagram.svg" alt="Instagram"></li>
+                            <li><img src="../imagens/whatsapp.svg" alt="Whatsapp"></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <p class="copy">2023 &copy; Todos os direitos reservados. Essen Delivery</p>
+        </div>
+            
+    </footer>
+</body>
+</html>

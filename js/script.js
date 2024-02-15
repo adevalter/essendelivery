@@ -287,7 +287,7 @@ function checkIfInputIsNull(event) {
     if (event.target.value === "0") {
         event.target.parentElement.parentElement.remove();
     }
-
     updateTotal();
 }
+
 

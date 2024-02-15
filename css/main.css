@@ -78,6 +78,23 @@ main {
     max-width: 198rem;
 }
 
+
+
+.login {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    background-color: lightgray;
+    border-radius: 16px;
+    padding: 1.5rem 40px;
+    align-items: center;
+    
+  }
+
+  input {    
+    width:200px;  
+  }
+
 .s-cardapio-home {
     position: relative;
     width: 100%;
